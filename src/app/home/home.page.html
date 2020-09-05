@@ -7,6 +7,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-searchbar placeholder="Pesquisar Pokemon" (ionChange)="onSearchChange($event)"></ion-searchbar>
+  <ion-list *ngIf="pokemon.length == 0">
+    <ion-item *ngFor="let i of [1,2,3,4,5,]">
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label class="ion-text-capitalize">
+        <h2>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h2>
+        <p>
+          <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
   <ion-list>
     <ion-item *ngFor="let poke of pokemon;" [routerLink]="poke.pokeIndex">
       <ion-avatar slot="start">
@@ -17,5 +33,9 @@
         <p>#{{ poke.pokeIndex }}</p>
       </ion-label>
     </ion-item>
-  </ion-list>      
+  </ion-list>
+  <ion-infite-scroll (ionInfinite="loadPokemon(true, $event)")>
+    <ion-infite-scroll-content loadingSpinner="bubbles" loadingText="Carregando mais Pokemons...">
+    </ion-infite-scroll-content>
+  </ion-infite-scroll>
 </ion-content>

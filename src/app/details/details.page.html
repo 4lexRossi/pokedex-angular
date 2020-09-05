@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-capitalize>{{ details?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
