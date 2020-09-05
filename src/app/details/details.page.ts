@@ -27,5 +27,9 @@ export class DetailsPage implements OnInit {
       this.details = details;
     })
   }
+  // showHeight(e){
+  //   let value = e.details.heigth;
+  //   value.tof
+  // }
 
 }
