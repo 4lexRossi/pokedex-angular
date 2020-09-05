@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar placeholder="Pesquisar Pokemon" (ionChange)="onSearchChange($event)"></ion-searchbar>
   <ion-list *ngIf="pokemon.length == 0">
-    <ion-item *ngFor="let i of [1,2,3,4,5,]">
+    <ion-item *ngFor="let i of [1,2,3,4,5]">
       <ion-avatar slot="start">
         <ion-skeleton-text animated></ion-skeleton-text>
       </ion-avatar>
@@ -34,8 +34,8 @@
       </ion-label>
     </ion-item>
   </ion-list>
-  <ion-infite-scroll (ionInfinite="loadPokemon(true, $event)")>
-    <ion-infite-scroll-content loadingSpinner="bubbles" loadingText="Carregando mais Pokemons...">
-    </ion-infite-scroll-content>
-  </ion-infite-scroll>
+  <ion-infinite-scroll (ionInfinite)="loadPokemon(true, $event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando mais Pokemons...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

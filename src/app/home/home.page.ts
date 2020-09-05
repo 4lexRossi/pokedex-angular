@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { PokemonService } from '../services/pokemon.service';
 
@@ -7,7 +7,7 @@ import { PokemonService } from '../services/pokemon.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
   offset = 0;
   pokemon = [];
   
@@ -22,16 +22,14 @@ export class HomePage {
     if (loadMore) {
       this.offset += 25;
     }
+    
     this.pokeService.getPokemon(this.offset).subscribe(res => {
       console.log('result: ', res);
       this.pokemon = [...this.pokemon, ...res];
       
       if (event) {
         event.target.complete();
-      }
-      if (this.offset == 200) {
-        this.infinite.disabled = true;
-      }
+      }            
     });
   }
 
@@ -49,5 +47,4 @@ export class HomePage {
       this.pokemon = [];
     });
   }
-
 }
