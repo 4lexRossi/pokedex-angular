@@ -1,4 +1,4 @@
-<h1 align="center"><img src="/pokeball.png" width="250px" height="250px" alt="imagem de uma pokebola">Pokedex - Angular/ionic</h1>
+<h1 align="center"><img src="/pokeball.png" width="100px" height="100px" alt="imagem de uma pokebola">Pokedex - Angular/ionic</h1>
 
 ![](https://img.shields.io/github/stars/4lexRossi/pokedex-angular.svg) ![](https://img.shields.io/github/forks/4lexRossi/pokedex-angular.svg) ![](https://img.shields.io/github/issues/4lexRossi/pokedex-angular.svg)
 
