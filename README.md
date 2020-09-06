@@ -34,7 +34,7 @@
 - [pokeApi](https://pokeapi.co/)
 
 > Screenshot página inicial.
-![](https://imgur.com/eotGLus.jpg)
+![](https://imgur.com/DrzMu6A.jpg)
 
 
 
