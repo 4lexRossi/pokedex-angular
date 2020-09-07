@@ -11,6 +11,8 @@ export class HomePage implements OnInit {
   offset = 0;
   pokemon = [];
   
+  
+  
   @ViewChild(IonInfiniteScroll) infinite: IonInfiniteScroll;
 
   constructor(private pokeService: PokemonService) {}

@@ -2,6 +2,10 @@
 
 ![](https://img.shields.io/github/stars/4lexRossi/pokedex-angular.svg) ![](https://img.shields.io/github/forks/4lexRossi/pokedex-angular.svg) ![](https://img.shields.io/github/issues/4lexRossi/pokedex-angular.svg)
 
+# Clique no link e veja a aplicação on-line
+[alex-pokedex](https://alex-pokedex.herokuapp.com/home)
+
+
 ## clone o repositório ou faça o fork
 
 `git clone https://github.com/4lexRossi/pokedex-angular.git`
